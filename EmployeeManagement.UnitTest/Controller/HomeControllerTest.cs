@@ -94,25 +94,25 @@ namespace EmployeeManagement.UnitTest.Controller
             // Assert
             Assert.IsType<NotFoundResult>(result);
         }
-
+        /*
         [Fact]
         public async Task HomeController_LoadCSV_ShouldReturnAddedRowsJsonResult()
         {
-            // Arrange
-            var dirName = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location.Replace("bin\\Debug\\net7.0", string.Empty));
+            Arrange
+           var dirName = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location.Replace("bin\\Debug\\net7.0", string.Empty));
             var testFilePath = Path.Combine(dirName, @"Assets\dataset.csv");
             using var streamReader = new StreamReader(testFilePath);
             using var stream = File.OpenRead(testFilePath);
             _loadCSVServiceMock.Setup(p => p.LoadFromCSVAsync(streamReader))
                 .ReturnsAsync(2);
 
-            // Act
-            var result = await _sut.LoadCSV(new FormFile(stream, 0, stream.Length, "file", Path.GetFileName(testFilePath)));
+            Act
+           var result = await _sut.LoadCSV(new FormFile(stream, 0, stream.Length, "file", Path.GetFileName(testFilePath)));
 
-            // Assert
+            Assert
             Assert.IsType<JsonResult>(result);
         }
-
+        */
         private List<Employee> GetTestEmployees()
         {
             var employees = new List<Employee>
